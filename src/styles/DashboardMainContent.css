@@ -1,0 +1,400 @@
+:root {
+  --primary-color: #4664e7;
+  --secondary-color: #f8faff;
+  --background-light: #ffffff;
+  --text-color: #1f2d3d;
+  --subtle-text: #6b7280;
+  --accent-red: #f87171;
+  --accent-green: #34d399;
+  --accent-orange: #fb923c;
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+
+  --card-padding: 1rem;
+  --border-radius: 0.75rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================
+   Layout: Main Dashboard
+============================ */
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.dashboard-top {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.dashboard-bottom {
+  margin-top: 1rem;
+}
+
+/* ============================
+   Dashboard Overview
+============================ */
+.dashboard-overview {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--background-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  flex: 2;
+}
+
+.body-status {
+  flex: 1;
+}
+
+.body-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.human-body {
+  max-width: 100%;
+  height: auto;
+}
+
+.label {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.label-heart {
+  top:20%;
+  left: 45%;
+}
+
+.label-leg {
+  bottom: 32%;
+  left: 50%;
+}
+
+.condition-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.card {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h4 {
+  margin: 0;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: var(--subtle-text);
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+}
+
+.progress.red {
+  background: var(--accent-red);
+}
+
+.progress.green {
+  background: var(--accent-green);
+}
+
+.progress.orange {
+  background: var(--accent-orange);
+}
+
+/* ============================
+   Upcoming Schedule
+============================ */
+.upcoming-schedule {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.schedule-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1f1f1f;
+}
+
+.schedule-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.schedule-day {
+  font-size: 13px;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-top: 10px;
+}
+
+.schedule-tag {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  color: #1f1f1f;
+}
+
+.schedule-tag span {
+  margin-left: 8px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Color Variants */
+.light-purple {
+  background-color: #f3e8ff;
+}
+
+.light-blue {
+  background-color: #e0f2fe;
+}
+
+.light-pink {
+  background-color: #ffe4e6;
+}
+
+.light-gray {
+  background-color: #f3f4f6;
+}
+
+/* ============================
+   Calendar View
+============================ */
+.calendar-container {
+  background: var(--background-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.arrows .arrow {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  background: var(--secondary-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.calendar-column {
+  flex: 1;
+  min-width: 80px;
+}
+
+.day {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.date {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 4px 0;
+  border-radius: 6px;
+  background: #f0f4ff;
+}
+
+.date.selected {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.times {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time-slot {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 4px;
+  background: #f3f4f6;
+}
+
+.time-slot.active {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+}
+
+.appointments {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.appointment-card {
+  flex: 1;
+  background: #f9fafb;
+  border-left: 4px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+}
+
+.appointment-card.dentist {
+  border-color: var(--accent-green);
+}
+
+.appointment-card.physiotherapy {
+  border-color: var(--accent-purple);
+}
+
+/* ============================
+   Activity Feed
+============================ */
+.activity-feed {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.activity-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.activity-header span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.activity-bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 90px;
+}
+
+.activity-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bar-track {
+  width: 6px;
+  height: 60px;
+  background-color: #e5eaf4;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.bar-fill {
+  width: 100%;
+  background-color: #00b2ff;
+  border-radius: 4px;
+  transition: height 0.3s ease;
+}
+
+.day-label {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+/* ============================
+   Responsive Adjustments
+============================ */
+@media (max-width: 768px) {
+  .dashboard-top {
+    flex-direction: column;
+  }
+
+  .right-panel {
+    width: 100%;
+  }
+
+  .calendar-grid {
+    overflow-x: scroll;
+  }
+
+  .appointments {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,128 @@
+.sidebar {
+  width: 250px;
+  background-color: #f9fafb;  /* very light gray */
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e2e8f0; /* subtle border */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 22px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  font-size: 1.15rem;
+  color: #2d3748; /* dark slate */
+  text-decoration: none;
+  border-radius: 8px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar li a .icon {
+  margin-right: 16px;
+  font-size: 1.6rem;
+  color: #4a5568; /* medium gray */
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: #e6f0ff; /* soft light blue */
+}
+
+.sidebar li:hover a {
+  color: #1a56db; /* bright blue */
+}
+
+.sidebar li:hover a .icon {
+  color: #1a56db;
+}
+
+.sidebar li.active {
+  background-color: #1a56db; /* bright blue */
+}
+
+.sidebar li.active a {
+  color: white;
+}
+
+.sidebar li.active a .icon {
+  color: white;
+}
+
+/* Scrollbar if needed */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar {
+  width: 260px; /* wider to fit icons and text better */
+  background-color: #f0f4f8;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #d0dae6;
+  font-weight: 600;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #2d3436;
+  font-size: 1.2rem;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar li a:hover {
+  background-color: #d0e6ff;
+  color: #1a73e8;
+}
+
+.sidebar li.active a {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.sidebar li a .icon {
+  font-size: 1.8rem; /* big enough for emojis */
+  margin-right: 14px;
+  flex-shrink: 0;
+}

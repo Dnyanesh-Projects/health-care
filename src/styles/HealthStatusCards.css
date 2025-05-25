@@ -1,0 +1,44 @@
+.health-status-cards {
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(16, 30, 115, 0.1);
+  user-select: none;
+  cursor: default;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 4px;
+}
+
+.status {
+  font-weight: 600;
+}
+
+.status.healthy {
+  color: #00b894;
+}
+
+.status.issue {
+  color: #d63031;
+}

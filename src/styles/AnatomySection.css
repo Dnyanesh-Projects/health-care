@@ -1,0 +1,77 @@
+.anatomy-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.anatomy-image {
+  width: 100%;
+  display: block;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+
+.dot-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.tooltip {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  min-width: 140px;
+  font-size: 13px;
+  text-align: center;
+  display: none;
+  z-index: 3;
+}
+
+.dot-wrapper:hover .tooltip {
+  display: block;
+}
+
+.small-text {
+  font-size: 11px;
+  color: #888;
+  margin: 3px 0;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.green {
+  color: green;
+}
+
+.status.red {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    font-size: 12px;
+    min-width: 120px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
